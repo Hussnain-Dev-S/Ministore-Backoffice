@@ -1,9 +1,6 @@
 ﻿using App.core.Contracts;
 using App.core.Models;
 using App.core.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace App.core.Services
 {
@@ -21,19 +18,41 @@ namespace App.core.Services
 
         public Product Add(Product product)
         {
-            throw new NotImplementedException();
+            if (product != null)
+            {
+                product.Id = GenerateId();
+                _products.Add(product);
+            }
+            return product;
         }
         public bool Update(Product product)
         {
+            if (product != null)
+            {
+                Product? existing = _products.Find(p => p.Id == product.Id);
+                if (existing == null) return false;
+
+                existing.Name = product.Name;
+                existing.Category = product.Category;
+                existing.Price = product.Price;
+                existing.Stock = product.Stock;
+                existing.Status = product.Status;
+
+                return true;
+
+            }
             return false;
         }
         public bool Delete(string id)
         {
-            return false;
+            Product prodtobeDeleted = GetById(id);
+            _products.Remove(prodtobeDeleted);
+            return true;
         }
         public Product GetById(string id)
         {
-            throw new NotImplementedException();
+            Product? prod = _products.Find(p => p.Id == id);
+            return prod;
         }
         public List<Product> GetAll()
         {
@@ -41,8 +60,19 @@ namespace App.core.Services
         }
         public List<Product> Search(string text, ProductCategoryEnum? category, ProductStatusEnum? status)
         {
-            throw new NotImplementedException();
+            //LINQ
+            List<Product> _filtered = _products.ToList();
+            _filtered= _filtered.Where(p => p.Name.Contains(text)).ToList();
 
+            if (category is not null)
+            {
+                _filtered = _filtered.Where(p => p.Category == category).ToList();
+            }
+            if (status is not null)
+            {
+                _filtered = _filtered.Where(p => p.Status == status).ToList();
+            }
+            return _filtered;
         }
 
         public void GenerateFakeProducts()
@@ -51,7 +81,7 @@ namespace App.core.Services
             _products.Add(new Product
             {
                 Id = GenerateId(),
-                Name = "laptop", 
+                Name = "laptop",
                 Category = ProductCategoryEnum.Electronics,
                 Price = 150000.00m,
                 Stock = 10,

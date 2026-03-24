@@ -98,6 +98,7 @@
             btnSave.TabIndex = 1;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -112,6 +113,7 @@
             btnCancel.Text = "Cancel";
             btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // tlpProductForm
             // 
@@ -285,6 +287,7 @@
             Name = "ProductForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "ProductForm";
+            FormClosing += ProductForm_FormClosing;
             pnlproductform.ResumeLayout(false);
             pnlBottom.ResumeLayout(false);
             flpBottom.ResumeLayout(false);

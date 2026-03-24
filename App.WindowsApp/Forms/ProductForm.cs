@@ -1,4 +1,5 @@
-﻿using App.core.Models;
+﻿using App.core.Contracts;
+using App.core.Models;
 using App.core.Utilities;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,11 @@ namespace App.WindowsApp.Forms
 {
     public partial class ProductForm : Form
     {
+        ProductFormModeEnum _mode;
+        Product _product;
+        IProductService _service;
 
-        public ProductForm(ProductFormModeEnum mode, Product? p)
+        public ProductForm(ProductFormModeEnum mode, Product? p, IProductService service)
         {
             InitializeComponent();
 
@@ -30,6 +34,10 @@ namespace App.WindowsApp.Forms
             cbStatus.SelectedIndex = 0;
 
 
+            _mode = mode;
+            _product = p;
+            _service = service;
+
             if (mode == ProductFormModeEnum.Edit)
             {
                 btnSave.Text = "Update";
@@ -40,18 +48,6 @@ namespace App.WindowsApp.Forms
             }
 
 
-            //if (mode == ProductFormModeEnum.Edit || mode == ProductFormModeEnum.View)
-            //{
-            //    tbId.Text = p.Id;
-            //    lblName.Text = p.Name;
-            //    cbCategory.SelectedItem = p.Category;
-            //    cbStatus.SelectedItem = p.Status;
-            //    // cbCategory.SelectedValue = p.Category;
-            //    //cbStatus.SelectedValue = p.Status;
-            //    nudPrice.Value = p.Price;
-            //    nudStock.Value = p.Stock;
-
-            //}
             if (mode == ProductFormModeEnum.Edit || mode == ProductFormModeEnum.View)
             {
 
@@ -73,6 +69,50 @@ namespace App.WindowsApp.Forms
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (_mode == ProductFormModeEnum.Add)
+            {
+                Product newProduct = new Product();
+                newProduct.Name = tbSearch.Text;
+                newProduct.Category = (ProductCategoryEnum)cbCategory.SelectedItem;
+                newProduct.Status = (ProductStatusEnum)cbStatus.SelectedItem;
+                newProduct.Price = nudPrice.Value;
+                newProduct.Stock = (int)nudStock.Value;
+
+
+                //_product = _service.Add(newProduct);
+                // tbId.Text = _product.Id;
+
+                Product temp = _service.Add(newProduct);
+                tbId.Text = temp?.Id ?? "";
+
+
+            }
+            else if (_mode == ProductFormModeEnum.Edit)
+            {
+                _product.Name = tbSearch.Text;
+                _product.Category = (ProductCategoryEnum)cbCategory.SelectedItem;
+                _product.Status = (ProductStatusEnum)cbStatus.SelectedItem;
+                _product.Price = nudPrice.Value;
+                _product.Stock = (int)nudStock.Value;
+
+                bool isUpdated = _service.Update(_product);
+            }
+
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ProductForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }
