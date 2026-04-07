@@ -62,53 +62,63 @@
             pnlproductform.Location = new Point(0, 0);
             pnlproductform.Margin = new Padding(4);
             pnlproductform.Name = "pnlproductform";
-            pnlproductform.Size = new Size(1000, 562);
+            pnlproductform.Size = new Size(738, 333);
             pnlproductform.TabIndex = 0;
             // 
             // pnlBottom
             // 
             pnlBottom.Controls.Add(flpBottom);
             pnlBottom.Dock = DockStyle.Bottom;
-            pnlBottom.Location = new Point(0, 406);
+            pnlBottom.Location = new Point(0, 265);
             pnlBottom.Margin = new Padding(4);
             pnlBottom.Name = "pnlBottom";
-            pnlBottom.Size = new Size(1000, 156);
+            pnlBottom.Size = new Size(738, 68);
             pnlBottom.TabIndex = 0;
             // 
             // flpBottom
             // 
             flpBottom.Controls.Add(btnSave);
             flpBottom.Controls.Add(btnCancel);
-            flpBottom.Dock = DockStyle.Fill;
+            flpBottom.Dock = DockStyle.Bottom;
             flpBottom.FlowDirection = FlowDirection.RightToLeft;
-            flpBottom.Location = new Point(0, 0);
+            flpBottom.Location = new Point(0, 4);
             flpBottom.Margin = new Padding(4);
             flpBottom.Name = "flpBottom";
-            flpBottom.Size = new Size(1000, 156);
+            flpBottom.Size = new Size(738, 64);
             flpBottom.TabIndex = 0;
             // 
             // btnSave
             // 
+            btnSave.Dock = DockStyle.Fill;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnSave.Image = Properties.Resources.save_32dp_000000_FILL0_wght400_GRAD0_opsz40;
             btnSave.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSave.Location = new Point(748, 50);
-            btnSave.Margin = new Padding(4, 50, 100, 4);
+            btnSave.Location = new Point(610, 9);
+            btnSave.Margin = new Padding(9);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(152, 50);
+            btnSave.Padding = new Padding(3);
+            btnSave.Size = new Size(119, 44);
             btnSave.TabIndex = 1;
             btnSave.Text = "Save";
+            btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Dock = DockStyle.Fill;
+            btnCancel.Dock = DockStyle.Bottom;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             btnCancel.Image = Properties.Resources.cancel_32dp_000000_FILL0_wght400_GRAD0_opsz40__1_;
             btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancel.Location = new Point(526, 50);
-            btnCancel.Margin = new Padding(4, 50, 100, 4);
+            btnCancel.Location = new Point(473, 9);
+            btnCancel.Margin = new Padding(9);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(118, 50);
+            btnCancel.Padding = new Padding(3);
+            btnCancel.Size = new Size(119, 44);
             btnCancel.TabIndex = 0;
             btnCancel.Text = "Cancel";
             btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -118,8 +128,8 @@
             // tlpProductForm
             // 
             tlpProductForm.ColumnCount = 2;
-            tlpProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 17.0984459F));
-            tlpProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 82.90155F));
+            tlpProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tlpProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
             tlpProductForm.Controls.Add(lblName, 0, 0);
             tlpProductForm.Controls.Add(lblCategory, 0, 1);
             tlpProductForm.Controls.Add(lblPrice, 0, 2);
@@ -137,85 +147,91 @@
             tlpProductForm.Margin = new Padding(4);
             tlpProductForm.Name = "tlpProductForm";
             tlpProductForm.RowCount = 7;
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 7.82918167F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 7.29537344F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 7.82918167F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 7.29537344F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 8.718862F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 7.82918167F));
-            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Percent, 53.2028465F));
-            tlpProductForm.Size = new Size(1000, 562);
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tlpProductForm.Size = new Size(738, 333);
             tlpProductForm.TabIndex = 1;
             tlpProductForm.Paint += tlpProductForm_Paint;
             // 
             // lblName
             // 
-            lblName.Anchor = AnchorStyles.None;
             lblName.AutoSize = true;
-            lblName.Location = new Point(55, 9);
+            lblName.Dock = DockStyle.Fill;
+            lblName.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblName.Location = new Point(4, 0);
             lblName.Margin = new Padding(4, 0, 4, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(59, 25);
+            lblName.Size = new Size(102, 40);
             lblName.TabIndex = 6;
             lblName.Text = "Name";
             lblName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblCategory
             // 
-            lblCategory.Anchor = AnchorStyles.None;
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(43, 52);
+            lblCategory.Dock = DockStyle.Fill;
+            lblCategory.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblCategory.Location = new Point(4, 40);
             lblCategory.Margin = new Padding(4, 0, 4, 0);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(84, 25);
+            lblCategory.Size = new Size(102, 40);
             lblCategory.TabIndex = 7;
             lblCategory.Text = "Category";
             lblCategory.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblPrice
             // 
-            lblPrice.Anchor = AnchorStyles.None;
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(60, 94);
+            lblPrice.Dock = DockStyle.Fill;
+            lblPrice.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblPrice.Location = new Point(4, 80);
             lblPrice.Margin = new Padding(4, 0, 4, 0);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(49, 25);
+            lblPrice.Size = new Size(102, 40);
             lblPrice.TabIndex = 8;
             lblPrice.Text = "Price";
             lblPrice.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblStock
             // 
-            lblStock.Anchor = AnchorStyles.None;
             lblStock.AutoSize = true;
-            lblStock.Location = new Point(58, 137);
+            lblStock.Dock = DockStyle.Fill;
+            lblStock.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblStock.Location = new Point(4, 120);
             lblStock.Margin = new Padding(4, 0, 4, 0);
             lblStock.Name = "lblStock";
-            lblStock.Size = new Size(54, 25);
+            lblStock.Size = new Size(102, 40);
             lblStock.TabIndex = 9;
             lblStock.Text = "stock";
             lblStock.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblStatus
             // 
-            lblStatus.Anchor = AnchorStyles.None;
             lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(55, 182);
+            lblStatus.Dock = DockStyle.Fill;
+            lblStatus.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblStatus.Location = new Point(4, 160);
             lblStatus.Margin = new Padding(4, 0, 4, 0);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(60, 25);
+            lblStatus.Size = new Size(102, 40);
             lblStatus.TabIndex = 10;
             lblStatus.Text = "Status";
             lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblId
             // 
-            lblId.Anchor = AnchorStyles.None;
             lblId.AutoSize = true;
-            lblId.Location = new Point(70, 228);
+            lblId.Dock = DockStyle.Fill;
+            lblId.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblId.Location = new Point(4, 200);
             lblId.Margin = new Padding(4, 0, 4, 0);
             lblId.Name = "lblId";
-            lblId.Size = new Size(30, 25);
+            lblId.Size = new Size(102, 40);
             lblId.TabIndex = 11;
             lblId.Text = "ID";
             lblId.TextAlign = ContentAlignment.MiddleCenter;
@@ -223,65 +239,66 @@
             // tbSearch
             // 
             tbSearch.Dock = DockStyle.Fill;
-            tbSearch.Location = new Point(174, 4);
+            tbSearch.Location = new Point(114, 4);
             tbSearch.Margin = new Padding(4);
             tbSearch.Name = "tbSearch";
-            tbSearch.Size = new Size(822, 31);
+            tbSearch.Size = new Size(620, 31);
             tbSearch.TabIndex = 0;
             tbSearch.TextChanged += tbSearch_TextChanged;
             // 
             // nudPrice
             // 
             nudPrice.Dock = DockStyle.Fill;
-            nudPrice.Location = new Point(174, 89);
+            nudPrice.Location = new Point(114, 84);
             nudPrice.Margin = new Padding(4);
             nudPrice.Name = "nudPrice";
-            nudPrice.Size = new Size(822, 31);
+            nudPrice.Size = new Size(620, 31);
             nudPrice.TabIndex = 2;
             // 
             // nudStock
             // 
             nudStock.Dock = DockStyle.Fill;
-            nudStock.Location = new Point(174, 133);
+            nudStock.Location = new Point(114, 124);
             nudStock.Margin = new Padding(4);
             nudStock.Name = "nudStock";
-            nudStock.Size = new Size(822, 31);
+            nudStock.Size = new Size(620, 31);
             nudStock.TabIndex = 3;
             // 
             // cbCategory
             // 
             cbCategory.Dock = DockStyle.Fill;
             cbCategory.FormattingEnabled = true;
-            cbCategory.Location = new Point(174, 48);
+            cbCategory.Location = new Point(114, 44);
             cbCategory.Margin = new Padding(4);
             cbCategory.Name = "cbCategory";
-            cbCategory.Size = new Size(822, 33);
+            cbCategory.Size = new Size(620, 33);
             cbCategory.TabIndex = 1;
             // 
             // cbStatus
             // 
             cbStatus.Dock = DockStyle.Fill;
             cbStatus.FormattingEnabled = true;
-            cbStatus.Location = new Point(174, 174);
+            cbStatus.Location = new Point(114, 164);
             cbStatus.Margin = new Padding(4);
             cbStatus.Name = "cbStatus";
-            cbStatus.Size = new Size(822, 33);
+            cbStatus.Size = new Size(620, 33);
             cbStatus.TabIndex = 4;
             // 
             // tbId
             // 
             tbId.Dock = DockStyle.Fill;
-            tbId.Location = new Point(174, 223);
+            tbId.Location = new Point(114, 204);
             tbId.Margin = new Padding(4);
             tbId.Name = "tbId";
-            tbId.Size = new Size(822, 31);
+            tbId.ReadOnly = true;
+            tbId.Size = new Size(620, 31);
             tbId.TabIndex = 5;
             // 
             // ProductForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 562);
+            ClientSize = new Size(738, 333);
             Controls.Add(pnlproductform);
             Margin = new Padding(4);
             Name = "ProductForm";

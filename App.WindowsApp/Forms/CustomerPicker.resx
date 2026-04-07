@@ -118,18 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAE2SURBVFhH7ZQxSkNBFEV/IS7CyoBauQPB0iKFZVYSAuksbVK4DEEEl5Eq2Ni4B/tU8d4wFx+T
-        N+TPEMbmHTgwufPmzfzh5w9BEATBabmAP3CX5JjZv3ALdZBcznXHHuANvmZZV6ZQG18ySHCsnDXdWEJt
-        nKOcNd2wN3TFIMGx8pPdkBrSdwYFbF3NO8SeY+r2bKEtptfQo+Vfxl55LfcskhfTOSxR+x1iL9tbFqm5
-        oRaqb4jY4tI7dAaf4Se09fQLruA59Kh6h45xB22zMXJNM3zyR7iAT/AGivzJ5DdcJzn2aj6gmED25h7c
-        i3sewAKvkbiHNn+Ax2CNXTODwuaSZ9jzAr0CKrxsLN5am1l5FndCCv3eQD5JjVxT6ufphlJ4cy0Kb066
-        oRTeXIvCm5NBEATBH8PwCyRHAwJvCGjsAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAV5JREFUWEft
+        lr1KxEAUhSMi/nSiiBaKDyDic9ha+AyCnZ0i9tYWdnbaC9aCtVgJIgo22mjnT63n3OTAGCdsZjITEPaD
+        j+ReMjOH3dnNFP+FBXgC7+ApXIO98QW/GxyHWXEXe4Vn8MHp0Wy8Qy0yx0aN7CE0+bRVfxmFemaWjZSs
+        Qk0upuAnXLGqRM9sW5WQDVgPwF8B6yerSrgv2DuyKiHzsE0APbNpVWI48SMcscof4Aqyl4WZ6ip8AchY
+        dc1OU4DeGAbwBVgeYFJ8AS4he4OchJ3pEoAG8Qw56NCqktg9oAAHVrVAA1y3YGyAc8hxt1a1YAm6i9cN
+        DRAVfA9qwXvnPngiEPvJ/Tr5TMC36r63AEQBKFmEvQYgCsA3YwydA7ino102ArmAHHttVSTHUCH4NYSg
+        cftWdeAFajKeD9twAzUmCZos1B2YjA/oW6TJdZgF7gXfK5jy33RIC4riB6sXwmuVRV16AAAAAElFTkSu
+        QmCC
 </value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

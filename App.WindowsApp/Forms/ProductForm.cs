@@ -45,6 +45,7 @@ namespace App.WindowsApp.Forms
             else if (mode == ProductFormModeEnum.View)
             {
                 btnSave.Visible = false;
+                
             }
 
 

@@ -84,6 +84,7 @@
             // 
             tsProducts.BackColor = Color.White;
             tsProducts.Dock = DockStyle.Fill;
+            tsProducts.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tsProducts.GripStyle = ToolStripGripStyle.Hidden;
             tsProducts.ImageScalingSize = new Size(24, 24);
             tsProducts.Items.AddRange(new ToolStripItem[] { tsbAdd, tsbEdit, tsbView, tsbDelete, toolStripSeparator1, tsbRefresh });
@@ -99,7 +100,7 @@
             tsbAdd.Image = Properties.Resources.square_plus;
             tsbAdd.ImageTransparentColor = Color.Magenta;
             tsbAdd.Name = "tsbAdd";
-            tsbAdd.Size = new Size(74, 57);
+            tsbAdd.Size = new Size(77, 57);
             tsbAdd.Text = "Add";
             tsbAdd.Click += tsbAdd_Click;
             // 
@@ -108,7 +109,7 @@
             tsbEdit.Image = Properties.Resources.edit;
             tsbEdit.ImageTransparentColor = Color.Magenta;
             tsbEdit.Name = "tsbEdit";
-            tsbEdit.Size = new Size(70, 57);
+            tsbEdit.Size = new Size(74, 57);
             tsbEdit.Text = "Edit";
             tsbEdit.Click += tsbEdit_Click;
             // 
@@ -117,7 +118,7 @@
             tsbView.Image = Properties.Resources.eye;
             tsbView.ImageTransparentColor = Color.Magenta;
             tsbView.Name = "tsbView";
-            tsbView.Size = new Size(77, 57);
+            tsbView.Size = new Size(84, 57);
             tsbView.Text = "View";
             tsbView.Click += tsbView_Click;
             // 
@@ -126,7 +127,7 @@
             tsbDelete.Image = Properties.Resources.square_minus;
             tsbDelete.ImageTransparentColor = Color.Magenta;
             tsbDelete.Name = "tsbDelete";
-            tsbDelete.Size = new Size(90, 57);
+            tsbDelete.Size = new Size(99, 57);
             tsbDelete.Text = "Delete";
             // 
             // toolStripSeparator1
@@ -139,7 +140,7 @@
             tsbRefresh.Image = Properties.Resources.refresh;
             tsbRefresh.ImageTransparentColor = Color.Magenta;
             tsbRefresh.Name = "tsbRefresh";
-            tsbRefresh.Size = new Size(98, 57);
+            tsbRefresh.Size = new Size(108, 57);
             tsbRefresh.Text = "Refresh";
             // 
             // pnlFilters
@@ -172,8 +173,8 @@
             tblFilters.Margin = new Padding(2, 4, 2, 4);
             tblFilters.Name = "tblFilters";
             tblFilters.RowCount = 2;
-            tblFilters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblFilters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblFilters.RowStyles.Add(new RowStyle(SizeType.Percent, 30F));
+            tblFilters.RowStyles.Add(new RowStyle(SizeType.Percent, 70F));
             tblFilters.Size = new Size(1258, 184);
             tblFilters.TabIndex = 0;
             tblFilters.Paint += tblFilters_Paint;
@@ -181,22 +182,24 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Dock = DockStyle.Fill;
-            lblCategory.Location = new Point(505, 0);
+            lblCategory.Dock = DockStyle.Bottom;
+            lblCategory.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblCategory.Location = new Point(505, 27);
             lblCategory.Margin = new Padding(2, 0, 2, 0);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(373, 92);
+            lblCategory.Size = new Size(373, 28);
             lblCategory.TabIndex = 1;
             lblCategory.Text = "Category";
             // 
             // lblStockStatus
             // 
             lblStockStatus.AutoSize = true;
-            lblStockStatus.Dock = DockStyle.Fill;
-            lblStockStatus.Location = new Point(882, 0);
+            lblStockStatus.Dock = DockStyle.Bottom;
+            lblStockStatus.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblStockStatus.Location = new Point(882, 27);
             lblStockStatus.Margin = new Padding(2, 0, 2, 0);
             lblStockStatus.Name = "lblStockStatus";
-            lblStockStatus.Size = new Size(374, 92);
+            lblStockStatus.Size = new Size(374, 28);
             lblStockStatus.TabIndex = 2;
             lblStockStatus.Text = "Stock Status";
             // 
@@ -204,7 +207,7 @@
             // 
             cmbCategory.Dock = DockStyle.Fill;
             cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(505, 96);
+            cmbCategory.Location = new Point(505, 59);
             cmbCategory.Margin = new Padding(2, 4, 2, 4);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(373, 33);
@@ -215,7 +218,7 @@
             // 
             cmbStockStatus.Dock = DockStyle.Fill;
             cmbStockStatus.FormattingEnabled = true;
-            cmbStockStatus.Location = new Point(882, 96);
+            cmbStockStatus.Location = new Point(882, 59);
             cmbStockStatus.Margin = new Padding(2, 4, 2, 4);
             cmbStockStatus.Name = "cmbStockStatus";
             cmbStockStatus.Size = new Size(374, 33);
@@ -225,7 +228,7 @@
             // txtText
             // 
             txtText.Dock = DockStyle.Fill;
-            txtText.Location = new Point(2, 96);
+            txtText.Location = new Point(2, 59);
             txtText.Margin = new Padding(2, 4, 2, 4);
             txtText.Name = "txtText";
             txtText.Size = new Size(499, 31);
@@ -235,11 +238,12 @@
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Dock = DockStyle.Fill;
-            lblSearch.Location = new Point(2, 0);
+            lblSearch.Dock = DockStyle.Bottom;
+            lblSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblSearch.Location = new Point(2, 27);
             lblSearch.Margin = new Padding(2, 0, 2, 0);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(499, 92);
+            lblSearch.Size = new Size(499, 28);
             lblSearch.TabIndex = 0;
             lblSearch.Text = "Search";
             lblSearch.Click += lblSearch_Click;
@@ -258,6 +262,7 @@
             // 
             // dgvProducts
             // 
+            dgvProducts.AllowUserToAddRows = false;
             dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProducts.BackgroundColor = Color.White;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -329,6 +334,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(tblProducts);
             Margin = new Padding(2, 4, 2, 4);
             Name = "ProductsView";

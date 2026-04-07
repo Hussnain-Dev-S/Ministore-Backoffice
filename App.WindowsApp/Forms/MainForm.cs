@@ -22,6 +22,8 @@ namespace App.WindowsApp.Forms
         private readonly Color NavNormalFore = Color.Black;
         private readonly Color NavActiveFore = Color.Black;
 
+
+        InMemoryCustomerService _customerService = new InMemoryCustomerService();
         InMemoryProductService _productService = new InMemoryProductService();
 
         //  private readonly IProductService _productService = new InMemoryProductService();
@@ -87,19 +89,19 @@ namespace App.WindowsApp.Forms
         {
             ShowView(() => new DashboardView());
 
-         }
+        }
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             ShowView(() => new ProductsView(_productService));
         }
 
-        private void ShowView<T>(Func<T> factory) where T:UserControl
+        private void ShowView<T>(Func<T> factory) where T : UserControl
         {
             var key = typeof(T);
-            if(!_views.TryGetValue(key, out var view))
+            if (!_views.TryGetValue(key, out var view))
             {
                 view = factory();
                 _views[key] = view;
@@ -131,6 +133,11 @@ namespace App.WindowsApp.Forms
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            ShowView(() => new CustomerView(_customerService));
         }
     }
 }

@@ -216,14 +216,14 @@
             // lvLowStock
             // 
             lvLowStock.Columns.AddRange(new ColumnHeader[] { clmProduct, clmStock });
-            lvLowStock.Dock = DockStyle.Bottom;
+            lvLowStock.Dock = DockStyle.Fill;
             lvLowStock.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lvLowStock.FullRowSelect = true;
             lvLowStock.GridLines = true;
-            lvLowStock.Location = new Point(0, 35);
+            lvLowStock.Location = new Point(0, 25);
             lvLowStock.Margin = new Padding(3, 5, 3, 5);
             lvLowStock.Name = "lvLowStock";
-            lvLowStock.Size = new Size(937, 212);
+            lvLowStock.Size = new Size(937, 222);
             lvLowStock.TabIndex = 1;
             lvLowStock.UseCompatibleStateImageBehavior = false;
             lvLowStock.View = View.Details;
@@ -262,14 +262,14 @@
             // lvRecentOrder
             // 
             lvRecentOrder.Columns.AddRange(new ColumnHeader[] { clmOrder, clmCostumerId, clmTotal, clmStatus });
-            lvRecentOrder.Dock = DockStyle.Bottom;
+            lvRecentOrder.Dock = DockStyle.Fill;
             lvRecentOrder.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lvRecentOrder.FullRowSelect = true;
             lvRecentOrder.GridLines = true;
-            lvRecentOrder.Location = new Point(0, 37);
+            lvRecentOrder.Location = new Point(0, 25);
             lvRecentOrder.Margin = new Padding(3, 5, 3, 5);
             lvRecentOrder.Name = "lvRecentOrder";
-            lvRecentOrder.Size = new Size(937, 204);
+            lvRecentOrder.Size = new Size(937, 216);
             lvRecentOrder.TabIndex = 1;
             lvRecentOrder.UseCompatibleStateImageBehavior = false;
             lvRecentOrder.View = View.Details;

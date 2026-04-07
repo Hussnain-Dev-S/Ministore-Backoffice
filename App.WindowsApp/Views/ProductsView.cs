@@ -96,6 +96,8 @@ namespace App.WindowsApp.Views
 
                 ProductForm prodForm = new ProductForm(ProductFormModeEnum.View, selectedProduct, _service);
                 prodForm.ShowDialog();
+
+                //RefreshGrid();
             }
         }
 
